@@ -11,6 +11,7 @@
 |------|------|
 | [user-profile](../rules/user-profile.md) | 用户行事风格与决策偏好 |
 | [project-context](project-context.md) | 项目架构、技术栈、关键决策 |
+| [agent-constraints](agent-constraints.md) | Agent 工作流约束与行为边界 |
 
 ## 动态经验（按需读取头部 50 行）
 
