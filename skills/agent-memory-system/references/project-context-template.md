@@ -15,17 +15,8 @@
 
 ## 开发规范
 
-- 文档语言：**中文**（注释、README、提交信息）
-- 提交风格：Conventional Commits，例：`feat: 添加玩家移动逻辑`
-- 代码风格：TypeScript 严格模式；场景类继承 `Phaser.Scene`
-
 ## 常用命令
 
-```bash
-npm run dev      # 开发服务器（热重载）
-npm run build    # 生产构建
-npm run preview  # 预览生产构建
-```
 
 ## 重要变更记录
 
