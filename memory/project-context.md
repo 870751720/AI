@@ -54,6 +54,15 @@ public/assets/           # 静态资源（Vite 原样复制）
 
 <!-- 每次架构变动或重大决策时追加 -->
 
+### 2026-05-02 — 存档系统架构确立
+
+- **核心设计**：状态与存档分离，运行时状态是业务代码持有的普通 JS 对象，存档系统只负责序列化和磁盘读写
+- **两层架构**：驱动层（`StorageDriver` 接口）+ 业务层（`GlobalStorage` / `SlotStorage`）
+- **全局存储**：`load()` / `save()` 整存整取，适用于设置、成就等
+- **存档位存储**：`switch(id)` 切换 + `save()` 保存，存档ID为字符串（`slot_0`、`auto_save` 等）
+- **测试策略**：`FileStorageDriver` 基于 Node.js `fs`，测试真实文件 IO，非内存 mock
+- **详细文档**：见 `docs/tech/save-system.md`
+
 ### 2026-05-02 — Markdown 配表 + 导表脚本体系建立
 
 - **配表格式**：Markdown GFM 表格，固定三段式结构（表定义 / 字段定义 / 数据）

@@ -13,6 +13,12 @@
 | [project-context](project-context.md) | 项目架构、技术栈、关键决策 |
 | [agent-constraints](agent-constraints.md) | Agent 工作流约束与行为边界 |
 
+## 技术参考（按需读取）
+
+| 文件 | 说明 |
+|------|------|
+| [docs/tech/README.md](../../docs/tech/README.md) | 技术文档总索引，涵盖存档系统等核心模块设计 |
+
 ## 动态经验（按需读取头部 50 行）
 
 | 文件 | 说明 |
