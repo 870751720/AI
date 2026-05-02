@@ -8,6 +8,12 @@
 
 ---
 
+### Markdown 表格解析时 `filter(Boolean)` 导致空单元格错位（2026-05-02）
+
+- **错误表现**：用 `.split('|').map(...).filter(Boolean)` 解析 GFM 表格时，空单元格（如 `stackable` 留空使用默认值）被过滤掉，导致后续单元格全部错位，`desc` 等字段被判定为空而校验失败
+- **正确做法**：去掉 `filter(Boolean)`，改用 `.split('|').slice(1, -1).map(s => s.trim())`，仅去掉行首行尾 `|` 产生的空字符串，保留中间的空单元格
+- **触发场景**：`item_table.md` 中装备类道具的 `stackable`/`max_stack` 留空时，导表脚本报错 "必填字段 desc 为空"
+
 <!-- 后续纠正和踩坑在此追加，格式：
 
 ### [简短标题]（YYYY-MM-DD）

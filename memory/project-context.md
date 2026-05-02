@@ -54,6 +54,16 @@ public/assets/           # 静态资源（Vite 原样复制）
 
 <!-- 每次架构变动或重大决策时追加 -->
 
+### 2026-05-02 — Markdown 配表 + 导表脚本体系建立
+
+- **配表格式**：Markdown GFM 表格，固定三段式结构（表定义 / 字段定义 / 数据）
+- **字段定义规范**：字段名、类型、必填、默认值、说明
+- **命名约定**：Markdown 源文件字段用 `snake_case`，导出产物自动转 `camelCase`
+- **导出产物**：JSON → `public/assets/data/`，TS Interface → `src/data/`
+- **导表命令**：`npm run export-data`
+- **当前配表**：`tier_table`（品级梯度，5 条）、`item_table`（基础道具，8 条）
+- **脚本路径**：`scripts/export-tables.js`
+
 ### 2026-05-02 — 游戏品级体系确立
 
 - **品级颜色**：白 → 蓝 → 紫 → 金 → 红
