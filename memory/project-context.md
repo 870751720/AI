@@ -59,9 +59,9 @@ public/assets/           # 静态资源（Vite 原样复制）
 - **配表格式**：Markdown GFM 表格，固定三段式结构（表定义 / 字段定义 / 数据）
 - **字段定义规范**：字段名、类型、必填、默认值、说明
 - **命名约定**：Markdown 源文件字段用 `snake_case`，导出产物自动转 `camelCase`
-- **导出产物**：JSON → `public/assets/data/`，TS Interface → `src/data/`
+- **导出产物**：TS Interface + 内联数据 → `src/data/{camelCase}.ts`（直接 import 使用）
 - **导表命令**：`npm run export-data`
-- **当前配表**：`tier_table`（品级梯度，5 条）、`item_table`（基础道具，8 条）
+- **当前配表**：`item_table`（基础道具，8 条）、`character_look_table`（外观套装，2 条）、`outfit_part_table`（部件明细，20 条）、`asset_mapping_table`（资源映射，13 条）
 - **脚本路径**：`scripts/export-tables.js`
 
 ### 2026-05-02 — 游戏品级体系确立
